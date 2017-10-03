@@ -1,0 +1,77 @@
+{
+	"name": "AppZombieProjectName",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "react-native start",
+		"start:android": "npm-run-all --parallel android:reverse start",
+		"log:android": "adb logcat *:S ReactNative:V",
+		"android:reverse": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:7007 tcp:7007 && adb reverse tcp:51349 tcp:51349",
+		"test": "jest",
+		"storybook": "storybook start -p 7007",
+		"storybook:android": "npm-run-all --parallel storybook android:reverse"
+	},
+	"dependencies": {
+		"@types/react": "^16.0.0",
+		"@types/react-native": "^0.47.0",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.48.4",
+		"react-native-navigation": "^1.1.235"
+	},
+	"devDependencies": {
+		"@jonny/react-native-mock": "^0.4.1",
+		"@storybook/addon-knobs": "^3.2.8",
+		"@storybook/addon-options": "^3.2.3",
+		"@storybook/addons": "^3.2.6",
+		"@storybook/react-native": "^3.2.3",
+		"@storybook/ui": "^3.2.7",
+		"@types/jest": "^20.0.6",
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"cross-env": "^5.0.5",
+		"enzyme": "^3.0.0",
+		"enzyme-adapter-react-16": "^1.0.0",
+		"enzyme-to-json": "^3.0.1",
+		"faker": "^4.1.0",
+		"jest": "21.2.1",
+		"react-native-cli": "^2.0.1",
+		"react-native-typescript-transformer": "^1.1.4",
+		"react-test-renderer": "16.0.0-alpha.12",
+		"ts-jest": "^21.0.1",
+		"ts-loader": "^2.3.2",
+		"typescript": "^2.4.2"
+	},
+	"jest": {
+		"preset": "react-native",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json"
+		],
+		"transformIgnorePatterns": [
+			"node_modules/(?!(jest-)?react-native)"
+		],
+		"snapshotSerializers": [
+			"enzyme-to-json/serializer"
+		],
+		"transform": {
+			"^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+			"^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+		},
+		"testRegex": ".*\\.test\\.(js|ts|tsx)$",
+		"moduleDirectories": [
+			"node_modules",
+			"."
+		],
+		"setupFiles": [
+			"./jest-setup.js"
+		]
+	},
+	"rnpm": {
+		"assets": [
+			"./assets/fonts"
+		]
+	}
+}

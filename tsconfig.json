@@ -1,0 +1,27 @@
+{
+
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "es2015", //makes tsc emit js with es6 syntax (I.E. classes, arrow functions etc...), since react-native requires it
+        "module":"es2015",
+        "jsx": "react", //makes tsc transform tsx files, turns them to js files react-native can consume
+        "sourceMap": true,
+        "noImplicitAny": false, // makes using js libraries easier, no need to declare types for everything
+        "alwaysStrict":true, //use strict mode always. avoids dangerous common js pitfalls
+        "allowSyntheticDefaultImports": true, // allows using import React from 'react' . Copies babel's default import resolution
+        "experimentalDecorators": true, // allows decorators, which is a must for mobx
+        "preserveConstEnums":true, // we want the name of enums to show up in compiled code so it's easier to debug.
+        "moduleResolution":"node", // without it import statements are useless - they won't import node modules,
+        "noEmit": true,
+        "paths": {
+            "config":["./config"],
+            "*": ["*", "*.ios", "*.android"],
+            "src/*":["./src/*"]
+        },
+        "types":["react-native","jest"]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "compileOnSave": true
+}
