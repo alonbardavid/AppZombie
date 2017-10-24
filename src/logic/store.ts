@@ -2,8 +2,11 @@ import {ProfileStore} from './profile/store';
 import {UiStore} from "./ui/store";
 import {UsersStore} from "./users/store";
 import {PostStore} from "./posts/store";
+import {Api,createApi} from "src/api";
 
-class RootStore {
+export class RootStore {
+
+    api:Api;
 
     uiStore:UiStore;
     profileStore:ProfileStore;
@@ -11,11 +14,12 @@ class RootStore {
     postsStore:PostStore;
 
 
-    constructor(){
+    constructor(api=createApi()){
+        this.api = api;
         this.uiStore = new UiStore();
-        this.profileStore = new ProfileStore();
-        this.usersStore = new UsersStore(this.profileStore);
-        this.postsStore = new PostStore(this.uiStore,this.usersStore);
+        this.profileStore = new ProfileStore(this.api);
+        this.usersStore = new UsersStore(this.api,this.profileStore);
+        this.postsStore = new PostStore(this.api ,this.uiStore,this.usersStore);
     }
 }
 

@@ -1,15 +1,16 @@
 import {autorun} from "mobx";
 import {User} from "./model";
 import {ProfileStore} from "src/logic/profile/store";
-import * as api from 'src/api';
+import {Api} from 'src/api';
 
 export class UsersStore {
     users = {} as {[id:number]:Partial<User>};
 
     private profileStore:ProfileStore;
-
-    constructor(profileStore){
+    private api:Api;
+    constructor(api,profileStore){
         this.profileStore = profileStore;
+        this.api = api;
         autorun(()=>{
             this.profileStore.user && this.updateUser(this.profileStore.user);
         })
@@ -32,7 +33,7 @@ export class UsersStore {
         if (!user){
             user = this.users[userId] = new User();
             user.id = userId;
-            api.getUser(userId).then(this.updateUser);
+            this.api.getUser(userId).then(this.updateUser);
         }
         return user as User;
     }

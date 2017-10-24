@@ -26,11 +26,11 @@ export class LoginScene extends React.Component<LoginSceneProperties,any> {
                 error:null
             });
             await this.props.submit({username,password});
+
             this.setState({
                 loading:false
             })
         } catch (e){
-            console.error(e);
             this.setState({
                 error:e.message,
                 loading:false

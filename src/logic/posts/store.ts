@@ -1,6 +1,6 @@
 import {observable,action,autorun,whyRun} from "mobx";
 import {Post} from "src/logic/posts/model";
-import * as api from 'src/api';
+import {Api,Schema} from 'src/api';
 import {UiStore} from "src/logic/ui/store";
 import {UsersStore} from "src/logic/users/store";
 
@@ -16,15 +16,17 @@ export class PostStore {
 
     private uiStore:UiStore;
     private usersStore:UsersStore;
+    private api:Api;
 
-    constructor(uiStore,usersStore){
+    constructor(api,uiStore,usersStore){
+        this.api = api;
         this.uiStore=uiStore;
         this.usersStore = usersStore;
     }
     refreshPosts = async ()=>{
         try {
             this.refreshing = true;
-            const posts:api.Schema.Post[] = await api.getPosts();
+            const posts:Schema.Post[] = await this.api.getPosts();
             this.postList = posts.map(p => this._updatePost(p));
             this.refreshing = false;
         } catch (e){
@@ -33,7 +35,7 @@ export class PostStore {
         }
 
     };
-    private _updatePost = (post:api.Schema.Post):Post=>{
+    private _updatePost = (post:Schema.Post):Post=>{
         let original = this.posts[post.id];
         if (!original){
             original = this.posts[post.id] = new Post();

@@ -1,4 +1,3 @@
-import React from 'react';
 import {action, observable} from "mobx";
 
 

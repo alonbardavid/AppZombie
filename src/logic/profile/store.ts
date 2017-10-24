@@ -1,5 +1,5 @@
 import {observable,action} from "mobx";
-import * as api from 'src/api';
+import {Api} from 'src/api';
 
 export class ProfileStore {
     @observable
@@ -8,9 +8,14 @@ export class ProfileStore {
     @observable
     user:any;
 
+    api:Api;
+    constructor(api){
+        this.api = api;
+    }
+
     login = async (credentials)=>{
-        const loggedIn = await api.login(credentials);
-        const user = await api.getCurrentUserProfile();
+        const loggedIn = await this.api.login(credentials);
+        const user = await this.api.getCurrentUserProfile();
         this._setCurrentUser(user);
         return true;
     };
@@ -22,8 +27,8 @@ export class ProfileStore {
 
     @action
     loginFromStorage = async ()=>{
-        const loggedIn = await api.loginFromStorage();
-        const user = await api.getCurrentUserProfile();
+        const loggedIn = await this.api.loginFromStorage();
+        const user = await this.api.getCurrentUserProfile();
         this._setCurrentUser(user);
         return true;
     }

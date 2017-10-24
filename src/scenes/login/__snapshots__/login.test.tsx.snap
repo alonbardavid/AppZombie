@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clicking on login button when full should trigger submit 1`] = `
+<FormLayout>
+  <PageTitle>
+    My App!
+  </PageTitle>
+  <TextRegular>
+    Please enter your credentials to login.
+  </TextRegular>
+  <TextRegular
+    small={true}
+  >
+    (hint: guest/guest)
+  </TextRegular>
+  <StandardInput
+    editable={true}
+    label="Username"
+    onChangeText={[Function]}
+    value=""
+  />
+  <StandardInput
+    editable={true}
+    label="Password"
+    onChangeText={[Function]}
+    secureTextEntry={true}
+    value=""
+  />
+  <CTAButton
+    loading={false}
+    onPress={[Function]}
+  >
+    Login
+  </CTAButton>
+</FormLayout>
+`;
+
+exports[`initial scene 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "justifyContent": "center",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#cbcbcb",
+        "flex": 1,
+        "height": "100%",
+        "padding": 20,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 30,
+            "fontWeight": "bold",
+          },
+          undefined,
+        ]
+      }
+    >
+      My App!
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 20,
+          },
+          Object {
+            "fontSize": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      Please enter your credentials to login.
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 20,
+          },
+          Object {
+            "fontSize": 15,
+          },
+          undefined,
+        ]
+      }
+    >
+      (hint: guest/guest)
+    </Text>
+    <View
+      style={Object {}}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+            },
+            Object {
+              "fontSize": 20,
+            },
+            Object {},
+          ]
+        }
+      >
+        Username
+      </Text>
+      <TextInput
+        editable={true}
+        onChangeText={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+            },
+            undefined,
+          ]
+        }
+        value=""
+      />
+    </View>
+    <View
+      style={Object {}}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+            },
+            Object {
+              "fontSize": 20,
+            },
+            Object {},
+          ]
+        }
+      >
+        Password
+      </Text>
+      <TextInput
+        editable={true}
+        onChangeText={[Function]}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 20,
+            },
+            undefined,
+          ]
+        }
+        value=""
+      />
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#0092FF",
+          "opacity": 1,
+          "padding": 5,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 20,
+              },
+              Object {
+                "fontSize": 20,
+              },
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#000000",
+                },
+              ],
+            ]
+          }
+        >
+          Login
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`scene with error 1`] = `
+<FormLayout>
+  <PageTitle>
+    My App!
+  </PageTitle>
+  <TextRegular>
+    Please enter your credentials to login.
+  </TextRegular>
+  <TextRegular
+    small={true}
+  >
+    (hint: guest/guest)
+  </TextRegular>
+  <StandardInput
+    editable={true}
+    label="Username"
+    onChangeText={[Function]}
+    value=""
+  />
+  <StandardInput
+    editable={true}
+    label="Password"
+    onChangeText={[Function]}
+    secureTextEntry={true}
+    value=""
+  />
+  <CTAButton
+    loading={false}
+    onPress={[Function]}
+  >
+    Login
+  </CTAButton>
+</FormLayout>
+`;

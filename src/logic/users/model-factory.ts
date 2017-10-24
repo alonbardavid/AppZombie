@@ -1,5 +1,6 @@
 import {User} from './model';
 import faker from 'faker';
+import {consistant} from "src/utils/text-utils";
 
 export function makeUser():User{
     return {
@@ -10,3 +11,4 @@ export function makeUser():User{
         phone:faker.phone.phoneNumber()
     }
 }
+export const getRegularUser = consistant(makeUser);
