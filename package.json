@@ -77,5 +77,8 @@
 		"assets": [
 			"./assets/fonts"
 		]
+	},
+	"resolutions":{
+		"mobx":"3.3.1"
 	}
 }

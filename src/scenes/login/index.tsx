@@ -19,16 +19,18 @@ export class LoginScene extends React.Component<LoginSceneProperties,any> {
     };
 
     onSubmit = async ()=>{
+        const {username,password} = this.state;
         try {
             this.setState({
                 loading:true,
                 error:null
             });
-            await this.props.submit(this.state);
+            await this.props.submit({username,password});
             this.setState({
                 loading:false
             })
         } catch (e){
+            console.error(e);
             this.setState({
                 error:e.message,
                 loading:false

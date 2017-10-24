@@ -3752,7 +3752,7 @@ insert-css@^1.0.0:
 
 intent-router@alonbardavid/intent-router:
   version "0.0.0"
-  resolved "https://codeload.github.com/alonbardavid/intent-router/tar.gz/82a7b94f839a4e00ab96921953a6a8e34e72c19a"
+  resolved "https://codeload.github.com/alonbardavid/intent-router/tar.gz/b92fa9df6167cda706067137a92a945164803372"
   dependencies:
     "@types/react" "^16.0.7"
     "@types/react-native" "^0.48.9"
@@ -4896,15 +4896,7 @@ mobx-react@^4.3.3:
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-mobx@^2.3.4:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-2.7.0.tgz#cf3d82d18c0ca7f458d8f2a240817b3dc7e54a01"
-
-mobx@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.3.0.tgz#1bc1dd7e78547065af04b49bdb7f2098cada47aa"
-
-mobx@^3.3.1:
+mobx@3.3.1, mobx@^2.3.4, mobx@^3.3.0, mobx@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.3.1.tgz#c38fc1a287a0dda3f5d4b85efe1137fedd9dcdf0"
 

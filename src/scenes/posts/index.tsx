@@ -7,17 +7,24 @@ import {
 } from 'react-native';
 import {UserProfile} from "src/logic/profile/model";
 
-interface HomeSceneProperties {
+interface PostsSceneProperties {
     user?:UserProfile
 }
 @observer
-export class HomeScene extends React.Component<HomeSceneProperties> {
+export class PostsScene extends React.Component<PostsSceneProperties> {
     render() {
         const {user} = this.props;
         return (
             <View style={styles.container}>
                 <Text style={[styles.welcome,{paddingBottom:10}]}>
                     Welcome {user && user.name}
+                </Text>
+                <Text style={styles.instructions}>
+                    To get started, edit index.android.js
+                </Text>
+                <Text style={styles.instructions}>
+                    Double tap R on your keyboard to reload,{'\n'}
+                    Shake or press menu button for dev menu
                 </Text>
             </View>
         );

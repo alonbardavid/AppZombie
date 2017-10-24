@@ -4,9 +4,5 @@ export interface LoginRequestBody {
 }
 
 export interface LoginResponseBody {
-    id:number;
-    username:string;
-    name:string;
-    email:string;
-    phone:string;
+    token:string
 }
