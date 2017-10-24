@@ -6,9 +6,9 @@ import {extras,whyRun} from 'mobx';
 import {Post} from "src/logic/posts/model";
 
 interface PostsSceneProperties {
-    posts?:Post[],
-    refreshing?:boolean,
-    refreshPosts?:()=>Promise<any>
+    posts:Post[],
+    refreshing:boolean,
+    refreshPosts:()=>Promise<any>
 }
 
 @observer

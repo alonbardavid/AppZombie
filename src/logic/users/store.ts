@@ -1,4 +1,4 @@
-import {observable,action,autorun} from "mobx";
+import {autorun} from "mobx";
 import {User} from "./model";
 import {ProfileStore} from "src/logic/profile/store";
 import * as api from 'src/api';
