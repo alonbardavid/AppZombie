@@ -12,7 +12,7 @@ import {
     View
 } from 'react-native';
 
-export class RootScene extends Component {
+export class HomeScene extends Component {
     render() {
         return (
             <View style={styles.container}>

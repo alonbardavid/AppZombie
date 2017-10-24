@@ -1,6 +1,6 @@
 import {registerScreen} from 'intent-router/module';
-import {RootScene} from './root';
+import {HomeScene} from './home';
 
-registerScreen(RootScene);
+registerScreen(HomeScene);
 
-export {RootScene};
+export {HomeScene};

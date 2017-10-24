@@ -1,1 +1,0 @@
-import 'src/scenes/root/root.storybook';
