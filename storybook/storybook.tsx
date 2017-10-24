@@ -10,7 +10,7 @@ configure(function() {
     require('./stories');
 }, module);
 
-const StorybookUI = getStorybookUI({ port: 7007, onDeviceUI: true });
+const StorybookUI = getStorybookUI({ port: 7007, onDeviceUI: false });
 Navigation.registerComponent('storybook', () => StorybookUI);
 Navigation.startSingleScreenApp({
     screen:{
