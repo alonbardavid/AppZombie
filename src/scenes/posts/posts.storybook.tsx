@@ -4,6 +4,6 @@ import { action } from '@storybook/addon-actions';
 import {PostsScene} from './'
 declare var module;
 
-storiesOf('scenes', module).add('home', () => {
+storiesOf('scenes', module).add('posts', () => {
     return <PostsScene />
 });
