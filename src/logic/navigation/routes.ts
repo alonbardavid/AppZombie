@@ -1,4 +1,4 @@
-import {addMode,addRoute} from 'intent-router/src/intent-router';
+import router from 'intent-router';
 import {HomeScene, LoginScene} from "src/scenes";
 import {LoginSceneRoute} from "../profile/routes";
 import {LOGGED_IN} from "./modes";
@@ -10,7 +10,7 @@ const HomeSceneRoute = {
 };
 
 
-addRoute({
+router.route({
     when:"INIT",
     resolve:async ()=>{
         try {
@@ -25,7 +25,7 @@ addRoute({
         }
     }
 });
-addRoute({
+router.route({
     from:LoginScene,
     when:"LOGIN",
     resolve:async ()=>HomeSceneRoute

@@ -1,14 +1,14 @@
-import {addMode} from 'intent-router/src/intent-router';
+import router from 'intent-router';
 import {HomeScene,PostsScene} from "src/scenes";
 import Store from '../store';
 
 export const LOGGED_OUT = "LOGGED_OUT";
 export const LOGGED_IN = "LOGGED_IN";
 
-addMode(LOGGED_OUT,{
+router.addMode(LOGGED_OUT,{
 
 });
-addMode(LOGGED_IN,{
+router.addMode(LOGGED_IN,{
     tabs:[{
         screen:HomeScene,
         icon: require("./home.png"),
