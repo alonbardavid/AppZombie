@@ -55,7 +55,7 @@
 			"json"
 		],
 		"transformIgnorePatterns": [
-			"node_modules/(?!(jest-)?react-native)"
+            "node_modules/(?!(jest-react-native|react-native.*|intent-router)/)"
 		],
 		"snapshotSerializers": [
 			"enzyme-to-json/serializer"

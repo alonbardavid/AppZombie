@@ -9,7 +9,6 @@ const HomeSceneRoute = {
     screen:HomeScene
 };
 
-
 router.route({
     when:"INIT",
     resolve:async ()=>{

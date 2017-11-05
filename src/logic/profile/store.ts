@@ -14,7 +14,7 @@ export class ProfileStore {
     }
 
     login = async (credentials)=>{
-        const loggedIn = await this.api.login(credentials);
+        await this.api.login(credentials);
         const user = await this.api.getCurrentUserProfile();
         this._setCurrentUser(user);
         return true;
@@ -28,8 +28,11 @@ export class ProfileStore {
     @action
     loginFromStorage = async ()=>{
         const loggedIn = await this.api.loginFromStorage();
-        const user = await this.api.getCurrentUserProfile();
-        this._setCurrentUser(user);
-        return true;
+        if  (loggedIn) {
+            const user = await this.api.getCurrentUserProfile();
+            this._setCurrentUser(user);
+            return true;
+        }
+        return false;
     }
 }
