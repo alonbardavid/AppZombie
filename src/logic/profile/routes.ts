@@ -1,5 +1,5 @@
-import router from 'intent-router';
-import {LOGGED_OUT} from "src/logic/navigation";
+import {router} from "src/logic/navigation/router";
+import {LOGGED_OUT} from 'src/logic/navigation/modes';
 import { LoginScene} from "src/scenes";
 import Store from 'src/logic/store';
 

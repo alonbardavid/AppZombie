@@ -1,4 +1,4 @@
-import router from 'intent-router';
+import {router} from './router';
 import {HomeScene,PostsScene} from "src/scenes";
 import Store from '../store';
 

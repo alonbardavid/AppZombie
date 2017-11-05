@@ -2908,6 +2908,10 @@ event-target-shim@^1.0.5:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-1.1.1.tgz#a86e5ee6bdaa16054475da797ccddf0c55698491"
 
+events-async@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/events-async/-/events-async-1.1.0.tgz#33640624c9ee3c2b8f19d1ca2a7f02276cba9c45"
+
 events@^1.0.0, events@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
@@ -3751,13 +3755,14 @@ insert-css@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-1.1.0.tgz#4a3f7a3e783877381bb8471a6452d1d27315db9e"
 
-intent-router@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/intent-router/-/intent-router-0.0.5.tgz#866f86f9a9dc4dfa768b262fb0a6106e7387a95c"
+intent-router@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/intent-router/-/intent-router-0.0.6.tgz#c240eee79b72a46758ffaa26c72c02208f6faf28"
   dependencies:
     "@types/react" "^16.0.7"
     "@types/react-native" "^0.48.9"
     babel-preset-react-native "^4.0.0"
+    events-async "^1.1.0"
     mobx "^3.3.0"
     react "^16.0.0"
     rollup-plugin-babel "^3.0.2"

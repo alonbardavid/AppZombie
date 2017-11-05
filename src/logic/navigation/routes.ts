@@ -1,4 +1,4 @@
-import router from 'intent-router';
+import {router} from './router';
 import {HomeScene, LoginScene} from "src/scenes";
 import {LoginSceneRoute} from "../profile/routes";
 import {LOGGED_IN} from "./modes";
