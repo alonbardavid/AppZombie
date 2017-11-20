@@ -1,4 +1,4 @@
-import config from 'src/config';
+import config from 'config';
 import {getToken} from './credentials';
 
 function buildEndpointUrl(path:string,requestConfig:any){
@@ -16,8 +16,9 @@ export function makeRequest(path:string,options:any = {}):Promise<any>{
             "Authorization":token?`Bearer ${token}`:undefined
         }
     };
-    console.log(`Requesting endpoint ${path}`,init);
-    return fetch(buildEndpointUrl(path,options),init).then(processResponse)
+    const uri = buildEndpointUrl(path,options);
+    console.log(`Requesting endpoint ${uri}`,init);
+    return fetch(uri,init).then(processResponse)
         .catch(async e=>{
             if (e.status === 401){
                 //await loginFromStorage();

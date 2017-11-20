@@ -1,7 +1,13 @@
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
+import groovy.json.JsonSlurper;
 
+def getNpmVersion() {
+    def inputFile = new File("${project(':app').projectDir}/../../package.json")
+    def packageJson = new JsonSlurper().parseText(inputFile.text)
+    return packageJson["version"]
+}
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
  * and bundleReleaseJsAndAssets).
@@ -73,6 +79,14 @@ import com.android.build.OutputFile
  */
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
+
+project.ext.envConfigFiles = [
+    debug: "config/.env",
+    release: "config/.env.production"
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -94,14 +108,15 @@ android {
     buildToolsVersion "25.0.1"
 
     defaultConfig {
-        applicationId "com.appzombieprojectname"
+        applicationId "com.appzombieprojectname" + project.env.get("APPLICATION_ID_PREFIX")
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0"
+        versionName getNpmVersion()
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        resValue "string", "build_config_package", "com.appzombieprojectname"
     }
     splits {
         abi {
@@ -136,7 +151,11 @@ dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
+
     compile project(':react-native-navigation')
+    compile project(':react-native-config')
+    compile project(':react-native-device-info')
+    compile project(':react-native-code-push')
 }
 
 // Run this once to be able to run the application with BUCK

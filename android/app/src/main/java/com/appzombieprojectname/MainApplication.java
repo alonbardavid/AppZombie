@@ -14,7 +14,12 @@ import com.facebook.soloader.SoLoader;
 
 import java.util.Arrays;
 import java.util.List;
+
 import com.reactnativenavigation.NavigationApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
+import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
+import com.microsoft.codepush.react.CodePush;
+
 
  public class MainApplication extends NavigationApplication {
 
@@ -27,7 +32,11 @@ import com.reactnativenavigation.NavigationApplication;
      protected List<ReactPackage> getPackages() {
          // Add additional packages you require here
          // No need to add RnnPackage and MainReactPackage
-         return Arrays.<ReactPackage>asList();
+         return Arrays.<ReactPackage>asList(
+              new RNDeviceInfo(),
+              new ReactNativeConfigPackage(),
+              new CodePush(BuildConfig.ANDROID_CODE_PUSH_KEY, MainApplication.this, BuildConfig.DEBUG)
+         );
      }
 
      @Override
@@ -76,4 +85,8 @@ import com.reactnativenavigation.NavigationApplication;
 
       });
   }
+   @Override
+      public  String getJSBundleFile() {
+          return CodePush.getJSBundleFile();
+      }
  }
