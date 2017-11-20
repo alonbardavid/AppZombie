@@ -184,13 +184,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@^0.48.9":
-  version "0.48.9"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.48.9.tgz#7c4530643f5d77820f17c7a69278f4556cdb2f4a"
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^16.0.0", "@types/react@^16.0.7":
+"@types/react@*", "@types/react@^16.0.0":
   version "16.0.7"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.7.tgz#f85b6c33c988a1631e2f32fedae71ec6d9718a0d"
 
@@ -1412,7 +1406,7 @@ babel-preset-minify@^0.2.0:
     babel-plugin-transform-undefined-to-void "^6.8.3"
     lodash.isplainobject "^4.0.6"
 
-babel-preset-react-native@4.0.0, babel-preset-react-native@^4.0.0:
+babel-preset-react-native@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/babel-preset-react-native/-/babel-preset-react-native-4.0.0.tgz#3df80dd33a453888cdd33bdb87224d17a5d73959"
   dependencies:
@@ -2881,10 +2875,6 @@ estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
 
-estree-walker@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.2.1.tgz#bdafe8095383d8414d5dc2ecf4c9173b6db9412e"
-
 esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
@@ -3755,17 +3745,12 @@ insert-css@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-1.1.0.tgz#4a3f7a3e783877381bb8471a6452d1d27315db9e"
 
-intent-router@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/intent-router/-/intent-router-0.0.6.tgz#c240eee79b72a46758ffaa26c72c02208f6faf28"
+intent-router@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/intent-router/-/intent-router-0.0.13.tgz#28aa168f5e4d3a671a55c873a2f8e727c382b2f0"
   dependencies:
-    "@types/react" "^16.0.7"
-    "@types/react-native" "^0.48.9"
-    babel-preset-react-native "^4.0.0"
     events-async "^1.1.0"
-    mobx "^3.3.0"
     react "^16.0.0"
-    rollup-plugin-babel "^3.0.2"
 
 interpret@^1.0.0:
   version "1.0.4"
@@ -4902,7 +4887,7 @@ mobx-react@^4.3.3:
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-mobx@3.3.1, mobx@^2.3.4, mobx@^3.3.0, mobx@^3.3.1:
+mobx@3.3.1, mobx@^2.3.4, mobx@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-3.3.1.tgz#c38fc1a287a0dda3f5d4b85efe1137fedd9dcdf0"
 
@@ -6599,19 +6584,6 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
 rndm@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/rndm/-/rndm-1.2.0.tgz#f33fe9cfb52bbfd520aa18323bc65db110a1b76c"
-
-rollup-plugin-babel@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-3.0.2.tgz#a2765dea0eaa8aece351c983573300d17497495b"
-  dependencies:
-    rollup-pluginutils "^1.5.0"
-
-rollup-pluginutils@^1.5.0:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-1.5.2.tgz#1e156e778f94b7255bfa1b3d0178be8f5c552408"
-  dependencies:
-    estree-walker "^0.2.1"
-    minimatch "^3.0.2"
 
 rst-selector-parser@^2.2.2:
   version "2.2.2"
