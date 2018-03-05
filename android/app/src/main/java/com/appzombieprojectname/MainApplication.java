@@ -35,7 +35,7 @@ import com.microsoft.codepush.react.CodePush;
          return Arrays.<ReactPackage>asList(
               new RNDeviceInfo(),
               new ReactNativeConfigPackage(),
-              new CodePush(BuildConfig.ANDROID_CODE_PUSH_KEY, MainApplication.this, BuildConfig.DEBUG)
+              new CodePush("not-in-use", MainApplication.this, BuildConfig.DEBUG)
          );
      }
 

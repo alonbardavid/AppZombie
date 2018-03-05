@@ -4,10 +4,13 @@ const res = preval`
   const {execSync} = require('child_process')
   const gitHash = execSync("git rev-parse --short HEAD",{encoding:"UTF-8"});
   module.exports = {
-    GIT_HASH:gitHash
+    gitHash:gitHash,
+    channel: process.env.MOBILECENTER_BRANCH || process.env.NODE_ENV || 'development'
   }
 `;
 const buildVariables = {
-  GIT_HASH:res.GIT_HASH
+  gitHash:res.gitHash,
+  channel: res.channel
+
 };
 export default buildVariables;

@@ -1,3 +1,5 @@
 {
-  "API_URL":"https://production/"
+  "API_URL":"https://production/",
+  "IOS_CODE_PUSH_KEY":"<code-push-key>",
+  "ANDROID_CODE_PUSH_KEY":"<code-push-key>"
 }

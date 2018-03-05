@@ -1,4 +1,6 @@
 {
-  "API_URL":"https://staging/"
+  "API_URL":"https://staging/",
+  "IOS_CODE_PUSH_KEY":"<code-push-key>",
+  "ANDROID_CODE_PUSH_KEY":"<code-push-key>"
 
 }
